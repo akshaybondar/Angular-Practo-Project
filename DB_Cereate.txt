@@ -1,0 +1,67 @@
+https://api.postalpincode.in/postoffice/Nanded----------------
+https://api.postalpincode.in/pincode/431602--------------
+----------------------------------------------------------------
+
+-----------------------------------------------------------------
+
+create database practo;
+use practo;
+
+CREATE TABLE user (
+    userid int NOT NULL AUTO_INCREMENT,
+    password varchar(10),
+	mobile varchar(10),
+	email varchar(50),
+	usertype char(20),
+	sessionstart datetime,
+	sessionend datetime,
+   
+    PRIMARY KEY (userid)
+);
+
+CREATE TABLE profile (
+    userid int,
+    name varchar(10),
+	mobile varchar(10),
+	email varchar(80),
+	gender varchar(20),
+	dob date,
+	bgroup varchar(10),
+	lastlogin datetime,
+    FOREIGN KEY (userid) REFERENCES user (userid)
+);
+
+CREATE TABLE doctor (
+    userid int,
+    speciality varchar(50),
+	ratings float,
+	fees double,
+	status char(20),
+	
+	degree varchar(40),
+	experience varchar(40),
+    
+	FOREIGN KEY (userid) REFERENCES user (userid)
+);
+
+CREATE TABLE address (
+    userid int,
+    house varchar(120),
+	colony varchar(100),
+	state varchar(40),
+	city char(40),
+	country char(40),
+	pincode varchar(20),
+	
+    
+	FOREIGN KEY (userid) REFERENCES user (userid)
+);
+
+CREATE TABLE appoinment (
+    doctorid int,
+    patientid int,
+	bdate date,
+	apdate date,
+	status char(20)
+);
+
