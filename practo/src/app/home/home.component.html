@@ -1,0 +1,774 @@
+<router-outlet></router-outlet>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+        <a class="navbar-brand px-3" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="23" viewBox="0 0 516 118">
+                <title>Practo</title>
+                <desc>Practo Logo</desc>
+                <g fill="none" fill-rule="evenodd">
+                    <path
+                        d="M39.818 57.187c0-10.969-8.892-19.863-19.864-19.863-10.974 0-19.87 8.894-19.87 19.863 0 10.972 8.896 19.865 19.87 19.865 10.972 0 19.864-8.893 19.864-19.865M515.805 57.187c0-10.969-8.895-19.863-19.866-19.863-10.97 0-19.865 8.894-19.865 19.863 0 10.972 8.895 19.865 19.865 19.865 10.971 0 19.866-8.893 19.866-19.865"
+                        fill="#2CB7DF" />
+                    <path
+                        d="M304.963 75.017c-9.653 0-17.479-7.115-17.479-17.83 0-10.715 7.826-17.826 17.479-17.826 6.215 0 11.59 2.909 14.82 8.007l16.158-11.607c-6.793-9.824-18.132-16.263-30.978-16.263-20.793 0-37.65 16.858-37.65 37.657 0 20.795 16.857 37.655 37.65 37.655 12.341 0 23.371-5.494 31.789-17.059l-16.324-11.303c-3.432 5.077-8.707 8.569-15.465 8.569M220.438 75.017c-9.656 0-17.484-7.115-17.484-17.83 0-10.715 7.828-17.826 17.484-17.826 9.654 0 17.481 7.164 17.481 17.826 0 10.664-7.827 17.83-17.481 17.83zm17.869-47.207c-5.015-4.757-11.705-8.312-21.091-8.312-17.872 0-34.435 15.062-34.435 37.657 0 22.592 16.406 37.655 34.435 37.655 8.693 0 15.325-3.383 20.341-8.317v6.192h20.173V21.659h-19.423v6.151zM153.617 29.934v-8.275h-19.443v71.026h20.159V58.999c0-14.15 7.857-17.992 16.578-17.992 2.141 0 4.428.142 6.859.711V21.659c-1.431-.43-3.575-.715-5.719-.715-5.716 0-13.939 1.876-18.434 8.99M363.979.938h-20.172v69.273c0 14.146 8.634 23.03 25.728 23.03 6.852 0 13.262-1.003 17.52-2.136V73.052c-3.951 1.135-8.354 1.992-13.815 1.992-5.631 0-9.261-1.574-9.261-7.43V39.361h23.417V21.554h-23.417V.938M430.061 75.017c-9.657 0-17.485-7.115-17.485-17.83 0-10.715 7.828-17.826 17.485-17.826 9.652 0 17.48 7.164 17.48 17.826 0 10.664-7.828 17.83-17.48 17.83zm0-55.519c-20.797 0-37.653 16.858-37.653 37.657 0 20.795 16.856 37.655 37.653 37.655 20.794 0 37.654-16.86 37.654-37.655 0-20.799-16.86-37.657-37.654-37.657zM86.934 75.017c-9.657 0-17.484-7.166-17.484-17.83 0-10.662 7.827-17.826 17.484-17.826 9.653 0 17.481 7.111 17.481 17.826s-7.828 17.83-17.481 17.83zm3.222-55.519c-9.389 0-16.078 3.555-21.094 8.312v-6.151h-19.42v96.28h20.173l-.002-31.446c5.018 4.934 11.649 8.317 20.343 8.317 18.027 0 34.435-15.063 34.435-37.655 0-22.595-16.566-37.657-34.435-37.657z"
+                        fill="#263077" />
+                </g>
+            </svg>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active" style="font-weight: bold;">
+                    <a class="nav-link px-4" href="#" style="font-size: 20px;">Doctors <span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active" style="font-weight: bold;">
+                    <a class="nav-link px-4" href="#" style="font-size: 20px;">Consult </a>
+                </li>
+                <li class="nav-item active" style="font-weight: bold;">
+                    <a class="nav-link px-4" href="#" style="font-size: 20px;">Pharmacy</a>
+                </li>
+                <li class="nav-item active" style="font-weight: bold;">
+                    <a class="nav-link px-4" href="#" style="font-size: 20px;">Diagnostics</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+
+                <li class="nav-item">
+                    <button type="button" class="btn btn-secondary px-3" (click)=" UserProfile()">User Profile</button>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Security & help
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-secondary px-3" (click)=" logoutProcess()">Logout</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<!-- 2nd city,searchbar -->
+<!-- <form> -->
+<div class="form-row align-items-center"
+    style="height: 100px; display: flex;justify-content: center;align-items: center;">
+    <div class="col-auto">
+        <label class="sr-only" for="inlineFormInput">City</label>
+        <input type="text" class="form-control mb-2" id="inlineFormInput" placeholder="City">
+    </div>
+    <div class=" col-auto">
+        <label class="sr-only" for="inlineFormInputGroup">Username</label>
+        <div class="input-group mb-2">
+            <div class="input-group-prepend">
+
+            </div>
+            <input type="text" class="form-control" id="inlineFormInputGroup"
+                placeholder="Search clinics,docters,hospitals,etc" style="width: 500px;">
+        </div>
+    </div>
+
+    <div class="col-auto">
+        <input type="button" value="Search" class="btn btn-primary btn-sm mb-2">
+    </div>
+</div>
+<!-- </form> -->
+<!-- 3rd line Hello Doctor -->
+<div class="banner">
+    <a href=""><span class="LazyLoad is-visible"><img
+                src="https://www.practostatic.com/consumer-home/desktop/images/1597423628/banner.png"
+                alt="Download Practo App Banner" class="banner__img"></span></a>
+</div>
+<!-- 4th line -->
+<div class="">
+    <div class="s-static">
+        <div class="content u-d__flex">
+            <div class="u-margin--15__top pos ">
+                <div class="u-margin--20__top">
+                    <div class="s-static__card u-margin--10__right">
+                        <div class="card--560 u-margin--15__right">
+                            <div class="card__img--580x225"><a href="#"><span class="LazyLoad is-visible"><img
+                                            src="https://www.practostatic.com/consumer-home/desktop/images/1597423628/find-doctors-2.png"
+                                            alt="Find Doctors" class="card__img"></span></a></div>
+                        </div>
+                    </div>
+                    <div class="s-static__card u-margin--10__right u-margin--10__left">
+                        <div class="card--560 u-margin--15__right">
+                            <div class="card__img--580x225"><a href="#"><span class="LazyLoad is-visible"><img
+                                            src="https://www.practostatic.com/consumer-home/desktop/images/1597423628/doctor-online.png"
+                                            alt="Consult Online" class="card__img"></span></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 5th line -->
+<div class="u-margin--60__top">
+    <div class="s-carousel" style="background-color:#28328c">
+        <div class="content content__padding">
+            <div class="s-carousel__header">
+                <div>
+                    <h2 class="u-font--24 u-margin--0 u-font--bold c-header--offer">How Practo is Helping India
+                        Fight COVID-19</h2>
+                </div>
+                <div class="cta">
+                    <div class="u-t-c--blue_6 u-font--16 "><a class="u-font--bold u-t-link" href=""></a></div>
+                </div>
+            </div>
+            <div class="s-carousel__cards">
+                <div class="u-d__flex c-flex--space-between">
+                    <div class="u-margin--10__left u-margin--10__right outline-none">
+                        <div class="card--360">
+                            <div class="card__img--360x449"><a href="#"><span class="LazyLoad is-visible"><img
+                                            src="https://www.practostatic.com/subscriptions/upsell/PH/covid_19_home_page_159003888598.png"
+                                            alt="Get unlimited online consultations" class="card__img"
+                                            style="background-color: transparent;"></span></a></div>
+                        </div>
+                    </div>
+                    <div class="u-margin--10__left u-margin--10__right outline-none">
+                        <div class="card--360">
+                            <div class="card__img--360x449"><a href="#"><span class="LazyLoad is-visible"><img
+                                            src="https://www.practostatic.com/consumer-home/desktop/images/1588237256/swasth-card-2.png"
+                                            alt="Swasth Banner" class="card__img"
+                                            style="background-color: transparent;"></span></a></div>
+                        </div>
+                    </div>
+                    <div class="u-margin--10__left u-margin--10__right outline-none">
+                        <div class="card--360">
+                            <div class="card__img--360x449"><a href="#"><span class="LazyLoad is-visible"><img
+                                            src="https://www.practostatic.com/consumer-home/desktop/images/1588237256/coronavirus.png"
+                                            alt="Coronavirus" class="card__img"
+                                            style="background-color: transparent;"></span></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 6th line -->
+<div class="u-margin--60__top">
+    <div class="s-static">
+        <div class="content u-d__flex">
+            <div class="u-margin--15__top pos ">
+                <h2 class="u-font--24 u-margin--0 u-font--bold u-margin--15__top">Consult top doctors online for any
+                    health concern</h2>
+                <div class="u-t-c--black_1 u-font--14 u-margin--5__top">Private online consultations with verified
+                    doctors in all specialists</div><button type="button" class="btn btn-primary btn_small pos-abs">View
+                    All Specialities</button>
+                <div class="u-margin--20__top">
+                    <div class="s-static__card u-margin--10__right">
+                        <div class="card card--180 c-padding--30 u-t-center u-margin--5"><a href="#"
+                                class="card-link"></a>
+                            <div class="card__img--120x120"><a href="#"><span class="LazyLoad is-visible"><img
+                                            src="https://www.practostatic.com/consult/consult-home/symptoms_icon/irregular-painful+period.png"
+                                            alt="Period doubts or Pregnancy" class="card_img"></span></a></div>
+                            <div class="u-t-c--black_1 u-font--14 u-font--bold u-margin--12__top">Period doubts or
+                                Pregnancy </div>
+                            <div
+                                class="u-margin--10__top u-font--12 u-t-c--black_1 u-t-uppercase u-t-c--blue_6 u-font--bold">
+                                CONSULT NOW</div>
+                        </div>
+                    </div>
+                    <div class="s-static__card u-margin--10__right u-margin--10__left">
+                        <div class="card card--180 c-padding--30 u-t-center u-margin--5"><a href="#"
+                                class="card-link"></a>
+                            <div class="card__img--120x120"><a href="#"><span class="LazyLoad is-visible"><img
+                                            src="https://www.practostatic.com/consult/consult-home/symptoms_icon/Acne.png"
+                                            alt="Acne, pimple or skin issues" class="card_img"></span></a></div>
+                            <div class="u-t-c--black_1 u-font--14 u-font--bold u-margin--12__top">Acne, pimple or
+                                skin issues</div>
+                            <div
+                                class="u-margin--10__top u-font--12 u-t-c--black_1 u-t-uppercase u-t-c--blue_6 u-font--bold">
+                                CONSULT NOW</div>
+                        </div>
+                    </div>
+                    <div class="s-static__card u-margin--10__left">
+                        <div class="card card--180 c-padding--30 u-t-center u-margin--5"><a href="#"
+                                class="card-link"></a>
+                            <div class="card__img--120x120"><a href="#"><span class="LazyLoad is-visible"><img
+                                            src="https://www.practo.com/consult/static/images/top-speciality-sexology.svg"
+                                            alt="Performance issues in bed" class="card_img"></span></a></div>
+                            <div class="u-t-c--black_1 u-font--14 u-font--bold u-margin--12__top">Performance issues
+                                in bed</div>
+                            <div
+                                class="u-margin--10__top u-font--12 u-t-c--black_1 u-t-uppercase u-t-c--blue_6 u-font--bold">
+                                CONSULT NOW</div>
+                        </div>
+                    </div>
+                    <div class="s-static__card u-margin--10__right u-margin--10__left">
+                        <div class="card card--180 c-padding--30 u-t-center u-margin--5"><a href="#"
+                                class="card-link"></a>
+                            <div class="card__img--120x120"><a href="#"><span class="LazyLoad is-visible"><img
+                                            src="https://www.practostatic.com/consult/consult-home/symptoms_icon/coughing.png"
+                                            alt="Cold, cough or fever" class="card_img"></span></a></div>
+                            <div class="u-t-c--black_1 u-font--14 u-font--bold u-margin--12__top">Cold, cough or
+                                fever</div>
+                            <div
+                                class="u-margin--10__top u-font--12 u-t-c--black_1 u-t-uppercase u-t-c--blue_6 u-font--bold">
+                                CONSULT NOW</div>
+                        </div>
+                    </div>
+                    <div class="s-static__card u-margin--10__right u-margin--10__left">
+                        <div class="card card--180 c-padding--30 u-t-center u-margin--5"><a href="#"
+                                class="card-link"></a>
+                            <div class="card__img--120x120"><a href="#"><span class="LazyLoad is-visible"><img
+                                            src="https://www.practo.com/consult/static/images/top-speciality-pediatric.svg"
+                                            alt="Child not feeling well" class="card_img"></span></a></div>
+                            <div class="u-t-c--black_1 u-font--14 u-font--bold u-margin--12__top">Child not feeling
+                                well</div>
+                            <div
+                                class="u-margin--10__top u-font--12 u-t-c--black_1 u-t-uppercase u-t-c--blue_6 u-font--bold">
+                                CONSULT NOW</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 7th line -->
+
+<div class="u-margin--60__top">
+    <div class="s-carousel">
+        <div class="content ">
+            <div class="s-carousel__header">
+                <div>
+                    <h2 class="u-font--24 u-margin--0 u-font--bold ">Book an appointment for an in-clinic
+                        consultation</h2>
+                    <div class="u-font--16 u-margin--5__top">Find experienced doctors across all specialties</div>
+                </div>
+                <div class="cta">
+                    <div class="u-t-c--blue_6 u-font--16 "><a class="u-font--bold u-t-link" href=""></a></div>
+                </div>
+            </div>
+            <div class="s-carousel__cards">
+                <div>
+                    <div class="slick-slider slider variable-width slick-initialized" dir="ltr"><button type="button"
+                            data-role="none" class="slick-arrow slick-prev slick-disabled" style="display:block">
+                            Previous</button>
+                        <div class="slick-list">
+                            <div class="slick-track"
+                                style="width: 10710px; opacity: 1; transform: translate3d(0px, 0px, 0px);">
+                                <div style="outline:none" data-index="0" class="slick-slide slick-active slick-current"
+                                    tabindex="-1" aria-hidden="false">
+                                    <div>
+                                        <div class="u-margin--10__left u-margin--10__right outline-none" tabindex="-1"
+                                            style="width:100%;display:inline-block">
+                                            <div class="card card--280"><a href="#" class="card-link"></a>
+                                                <div class="card__img--280x200"><a href="#"><span
+                                                            class="LazyLoad is-visible"><img
+                                                                src="https://www.practostatic.com/consumer-home/desktop/images/1558283618/sp-dentist@2x.jpg"
+                                                                alt="Dentist" class="card__img"
+                                                                style="background-color: rgb(215, 216, 226);"></span></a>
+                                                </div>
+                                                <div class="u-margin--12__top">
+                                                    <h6 class="u-font--16 u-margin--0 u-font--bold card__header">
+                                                        Dentist</h6>
+                                                </div>
+                                                <div class="u-t-c--black_1 u-font--14">Teething troubles? Schedule a
+                                                    dental checkup</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="outline:none" data-index="1" class="slick-slide" tabindex="-1"
+                                    aria-hidden="true">
+                                    <div>
+                                        <div class="u-margin--10__left u-margin--10__right outline-none" tabindex="-1"
+                                            style="width:100%;display:inline-block">
+                                            <div class="card card--280"><a href="#" class="card-link"></a>
+                                                <div class="card__img--280x200"><a href="#"><span
+                                                            class="LazyLoad is-visible"><img
+                                                                src="https://www.practostatic.com/consumer-home/desktop/images/1558283618/sp-gynecologist@2x.jpg"
+                                                                alt="Gynecologist/Obstetrician" class="card__img"
+                                                                style="background-color: rgb(215, 216, 226);"></span></a>
+                                                </div>
+                                                <div class="u-margin--12__top">
+                                                    <h6 class="u-font--16 u-margin--0 u-font--bold card__header">
+                                                        Gynecologist/Obstetrician</h6>
+                                                </div>
+                                                <div class="u-t-c--black_1 u-font--14">Explore for women’s health,
+                                                    pregnancy and infertility treatments</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="outline:none" data-index="2" class="slick-slide" tabindex="-1"
+                                    aria-hidden="true">
+                                    <div>
+                                        <div class="u-margin--10__left u-margin--10__right outline-none" tabindex="-1"
+                                            style="width:100%;display:inline-block">
+                                            <div class="card card--280"><a href="#" class="card-link"></a>
+                                                <div class="card__img--280x200"><a href="#"><span
+                                                            class="LazyLoad is-visible"><img
+                                                                src="https://www.practostatic.com/consumer-home/desktop/images/1558283618/sp-dietitian@2x.jpg"
+                                                                alt="Dietitian/Nutrition" class="card__img"
+                                                                style="background-color: rgb(215, 216, 226);"></span></a>
+                                                </div>
+                                                <div class="u-margin--12__top">
+                                                    <h6 class="u-font--16 u-margin--0 u-font--bold card__header">
+                                                        Dietitian/Nutrition</h6>
+                                                </div>
+                                                <div class="u-t-c--black_1 u-font--14">Get guidance on eating right,
+                                                    weight management and sports nutrition</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="outline:none" data-index="3" class="slick-slide" tabindex="-1"
+                                    aria-hidden="true">
+                                    <div>
+                                        <div class="u-margin--10__left u-margin--10__right outline-none" tabindex="-1"
+                                            style="width:100%;display:inline-block">
+                                            <div class="card card--280"><a href="#" class="card-link"></a>
+                                                <div class="card__img--280x200"><a href="#"><span
+                                                            class="LazyLoad is-visible"><img
+                                                                src="https://www.practostatic.com/consumer-home/desktop/images/1558283618/sp-physiotherapist@2x.jpg"
+                                                                alt="Physiotherapist" class="card__img"
+                                                                style="background-color: rgb(215, 216, 226);"></span></a>
+                                                </div>
+                                                <div class="u-margin--12__top">
+                                                    <h6 class="u-font--16 u-margin--0 u-font--bold card__header">
+                                                        Physiotherapist</h6>
+                                                </div>
+                                                <div class="u-t-c--black_1 u-font--14">Pulled a muscle? Get it
+                                                    treated by a trained physiotherapist</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="outline:none" data-index="4" class="slick-slide" tabindex="-1"
+                                    aria-hidden="true">
+                                    <div>
+                                        <div class="u-margin--10__left u-margin--10__right outline-none" tabindex="-1"
+                                            style="width:100%;display:inline-block">
+                                            <div class="card card--280"><a href="#" class="card-link"></a>
+                                                <div class="card__img--280x200"><a href="#"><span
+                                                            class="LazyLoad is-visible"><img
+                                                                src="https://www.practostatic.com/consumer-home/desktop/images/1558283618/sp-general-surgeon@2x.jpg"
+                                                                alt="General surgeon" class="card__img"
+                                                                style="background-color: rgb(215, 216, 226);"></span></a>
+                                                </div>
+                                                <div class="u-margin--12__top">
+                                                    <h6 class="u-font--16 u-margin--0 u-font--bold card__header">
+                                                        General surgeon</h6>
+                                                </div>
+                                                <div class="u-t-c--black_1 u-font--14">Need to get operated? Find
+                                                    the right surgeon</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="outline:none" data-index="5" class="slick-slide" tabindex="-1"
+                                    aria-hidden="true">
+                                    <div>
+                                        <div class="u-margin--10__left u-margin--10__right outline-none" tabindex="-1"
+                                            style="width:100%;display:inline-block">
+                                            <div class="card card--280"><a href="#" class="card-link"></a>
+                                                <div class="card__img--280x200"><a href="#"><span
+                                                            class="LazyLoad"></span></a></div>
+                                                <div class="u-margin--12__top">
+                                                    <h6 class="u-font--16 u-margin--0 u-font--bold card__header">
+                                                        Orthopedist</h6>
+                                                </div>
+                                                <div class="u-t-c--black_1 u-font--14">For Bone and Joints issues,
+                                                    spinal injuries and more</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="outline:none" data-index="6" class="slick-slide" tabindex="-1"
+                                    aria-hidden="true">
+                                    <div>
+                                        <div class="u-margin--10__left u-margin--10__right outline-none" tabindex="-1"
+                                            style="width:100%;display:inline-block">
+                                            <div class="card card--280"><a href="#" class="card-link"></a>
+                                                <div class="card__img--280x200"><a href="#"><span
+                                                            class="LazyLoad"></span></a></div>
+                                                <div class="u-margin--12__top">
+                                                    <h6 class="u-font--16 u-margin--0 u-font--bold card__header">
+                                                        General physician</h6>
+                                                </div>
+                                                <div class="u-t-c--black_1 u-font--14">Find the right family doctor
+                                                    in your neighborhood</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="outline:none" data-index="7" class="slick-slide" tabindex="-1"
+                                    aria-hidden="true">
+                                    <div>
+                                        <div class="u-margin--10__left u-margin--10__right outline-none" tabindex="-1"
+                                            style="width:100%;display:inline-block">
+                                            <div class="card card--280"><a href="#" class="card-link"></a>
+                                                <div class="card__img--280x200"><a href="#"><span
+                                                            class="LazyLoad"></span></a></div>
+                                                <div class="u-margin--12__top">
+                                                    <h6 class="u-font--16 u-margin--0 u-font--bold card__header">
+                                                        Pediatrician</h6>
+                                                </div>
+                                                <div class="u-t-c--black_1 u-font--14">Child Specialists and Doctors
+                                                    for Infant</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="outline:none" data-index="8" class="slick-slide" tabindex="-1"
+                                    aria-hidden="true">
+                                    <div>
+                                        <div class="u-margin--10__left u-margin--10__right outline-none" tabindex="-1"
+                                            style="width:100%;display:inline-block">
+                                            <div class="card card--280"><a href="#" class="card-link"></a>
+                                                <div class="card__img--280x200"><a href="#"><span
+                                                            class="LazyLoad"></span></a></div>
+                                                <div class="u-margin--12__top">
+                                                    <h6 class="u-font--16 u-margin--0 u-font--bold card__header">
+                                                        Gastroenterologist</h6>
+                                                </div>
+                                                <div class="u-t-c--black_1 u-font--14">Explore for issues related to
+                                                    digestive system, liver and pancreas</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 8th line -->
+<div class="u-margin--60__top">
+    <div class="s-static">
+        <div class="content u-border__top--grey_2 u-border__bottom--grey_2 u-d__flex">
+            <div class="u-margin--30__top u-margin--30__bottom u-margin-auto__left u-margin-auto__right">
+                <div class="u-margin--20__top">
+                    <div class="s-static__card u-margin--10__right">
+                        <div class="card--360 u-padding--20">
+                            <h3 class="u-margin--0 u-font--bold u-font--30">Read top articles from health experts
+                            </h3>
+                            <div class="u-t-c--black_1 u-font--14 u-margin--5__top">Health articles that keep you
+                                informed about good health practices and achieve your goals.</div><button type="button"
+                                class="btn btn-primary u-margin--30__top">See all articles</button>
+                        </div>
+                    </div>
+                    <div class="s-static__card u-margin--10__right u-margin--10__left">
+                        <div class="card card--280"><a href="#" class="card-link"></a>
+                            <div class="card__img--280x200"><a href="#"><span class="LazyLoad is-visible"><img
+                                            src="https://www.practostatic.com/fit/5fd27b74d9477cb633445cf3f105078bbc479910"
+                                            alt="12 Coronavirus Myths and Facts That You Should Be Aware Of"
+                                            class="card__img obj-fit--cover"
+                                            style="background-color: rgb(215, 216, 226);"></span></a></div>
+                            <div
+                                class="u-font--12 u-font--bold u-t-c--green_1 u-t-uppercase u-margin--15__top u-font--bold">
+                                Coronavirus</div>
+                            <div class="u-margin--5__top">
+                                <h6 class="u-font--16 u-margin--0 u-font--bold ">12 Coronavirus Myths and Facts That
+                                    You Should Be Aware Of</h6>
+                            </div>
+                            <div class="u-t-c--black_1 u-font--14 u-margin--10__top">Dr. Diana Borgio</div>
+                        </div>
+                    </div>
+                    <div class="s-static__card u-margin--10__left">
+                        <div class="card card--280"><a href="#" class="card-link"></a>
+                            <div class="card__img--280x200"><a href="#"><span class="LazyLoad is-visible"><img
+                                            src="https://www.practostatic.com/fit/bade52edc7fb158bf627216bf96c2b881a97f30c"
+                                            alt="Eating Right to Build Immunity Against Cold and Viral Infections"
+                                            class="card__img obj-fit--cover"
+                                            style="background-color: rgb(215, 216, 226);"></span></a></div>
+                            <div
+                                class="u-font--12 u-font--bold u-t-c--green_1 u-t-uppercase u-margin--15__top u-font--bold">
+                                Vitamins and Supplements</div>
+                            <div class="u-margin--5__top">
+                                <h6 class="u-font--16 u-margin--0 u-font--bold ">Eating Right to Build Immunity
+                                    Against Cold and Viral Infections</h6>
+                            </div>
+                            <div class="u-t-c--black_1 u-font--14 u-margin--10__top">Dr. Diana Borgio</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 9th line -->
+
+<div class="u-margin--60__top">
+    <div class="s-slider">
+        <div class="s-slider__content" style="background-color:#FFFFFF">
+            <h3 class="u-margin--0 u-font--bold u-margin--30__bottom u-t-center u-font--30">What our users have to
+                say</h3>
+            <div>
+                <div class="slick-slider slick-initialized" dir="ltr">
+                    <div data-role="none" class="slick-arrow slick-prev" style="display:block" currentslide="0"
+                        slidecount="3">
+                        <div class="carousel-navigation slider">
+                            <div class="pos-v-center arrow-prev">
+                                <div class="carousel-navigation-button prev"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slick-list">
+                        <div class="slick-track"
+                            style="width: 8960px; opacity: 1; transform: translate3d(-5120px, 0px, 0px); transition: -webkit-transform 500ms ease 0s;">
+                            <div data-index="-1" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true"
+                                style="width: 1280px;">
+                                <div>
+                                    <div class="card-testimonial">
+                                        <div class="testimony">Very good app. Well thought out about
+                                            booking/rescheduling/canceling an appointment. Also, Doctor's feedback
+                                            mechanism is good and describes all the basics in a good way</div>
+                                        <div class="u-margin--30__top"><i class="icon-ic_user_system user-icon"></i>
+                                            <div class="u-d__inline-block u-t-left u-v-middle u-margin--10__left">
+                                                <div class="user-name">Avinash Kumar</div>
+                                                <div class="user-time"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-index="0" class="slick-slide slick-active slick-current" tabindex="-1"
+                                aria-hidden="false" style="outline: none; width: 1280px;">
+                                <div>
+                                    <div class="card-testimonial">
+                                        <div class="testimony">Very helpful. Far easier than doing same things on
+                                            computer. Allows quick and easy search with speedy booking. Even
+                                            maintains history of doctors visited.</div>
+                                        <div class="u-margin--30__top"><i class="icon-ic_user_system user-icon"></i>
+                                            <div class="u-d__inline-block u-t-left u-v-middle u-margin--10__left">
+                                                <div class="user-name">Amit Sharma</div>
+                                                <div class="user-time"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-index="1" class="slick-slide" tabindex="-1" aria-hidden="true"
+                                style="outline: none; width: 1280px;">
+                                <div>
+                                    <div class="card-testimonial">
+                                        <div class="testimony">Very easy to book,maintain history. Hassle free from
+                                            older versions of booking appointment via telephone.. Thanks Practo for
+                                            making it simple.</div>
+                                        <div class="u-margin--30__top"><i class="icon-ic_user_system user-icon"></i>
+                                            <div class="u-d__inline-block u-t-left u-v-middle u-margin--10__left">
+                                                <div class="user-name">Jyothi Bhatia</div>
+                                                <div class="user-time"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-index="2" class="slick-slide" tabindex="-1" aria-hidden="true"
+                                style="outline: none; width: 1280px;">
+                                <div>
+                                    <div class="card-testimonial">
+                                        <div class="testimony">Very good app. Well thought out about
+                                            booking/rescheduling/canceling an appointment. Also, Doctor's feedback
+                                            mechanism is good and describes all the basics in a good way</div>
+                                        <div class="u-margin--30__top"><i class="icon-ic_user_system user-icon"></i>
+                                            <div class="u-d__inline-block u-t-left u-v-middle u-margin--10__left">
+                                                <div class="user-name">Avinash Kumar</div>
+                                                <div class="user-time"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-index="3" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true"
+                                style="width: 1280px;">
+                                <div>
+                                    <div class="card-testimonial">
+                                        <div class="testimony">Very helpful. Far easier than doing same things on
+                                            computer. Allows quick and easy search with speedy booking. Even
+                                            maintains history of doctors visited.</div>
+                                        <div class="u-margin--30__top"><i class="icon-ic_user_system user-icon"></i>
+                                            <div class="u-d__inline-block u-t-left u-v-middle u-margin--10__left">
+                                                <div class="user-name">Amit Sharma</div>
+                                                <div class="user-time"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-index="4" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true"
+                                style="width: 1280px;">
+                                <div>
+                                    <div class="card-testimonial">
+                                        <div class="testimony">Very easy to book,maintain history. Hassle free from
+                                            older versions of booking appointment via telephone.. Thanks Practo for
+                                            making it simple.</div>
+                                        <div class="u-margin--30__top"><i class="icon-ic_user_system user-icon"></i>
+                                            <div class="u-d__inline-block u-t-left u-v-middle u-margin--10__left">
+                                                <div class="user-name">Jyothi Bhatia</div>
+                                                <div class="user-time"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-index="5" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true"
+                                style="width: 1280px;">
+                                <div>
+                                    <div class="card-testimonial">
+                                        <div class="testimony">Very good app. Well thought out about
+                                            booking/rescheduling/canceling an appointment. Also, Doctor's feedback
+                                            mechanism is good and describes all the basics in a good way</div>
+                                        <div class="u-margin--30__top"><i class="icon-ic_user_system user-icon"></i>
+                                            <div class="u-d__inline-block u-t-left u-v-middle u-margin--10__left">
+                                                <div class="user-name">Avinash Kumar</div>
+                                                <div class="user-time"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-role="none" class="slick-arrow slick-next" style="display:block" currentslide="0"
+                        slidecount="3">
+                        <div class="carousel-navigation slider">
+                            <div class="pos-v-center arrow-next">
+                                <div class="next carousel-navigation-button"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slick-dots">
+                        <div class="carousel-dots">
+                            <li class="slick-active"><button>1</button></li>
+                            <li class=""><button>2</button></li>
+                            <li class=""><button>3</button></li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 10th line -->
+
+<div class="u-margin--60__top">
+    <div class="s-appbanner ">
+        <div class="u-height--100 s-appbanner__content">
+            <div class="pos pure-u-1-2 u-height--100"><span class="LazyLoad is-visible"><img
+                        src="https://www.practostatic.com/consumer-home/desktop/images/1597423628/footer-img.png"
+                        alt="Download Practo App" class="s-appbanner__image "></span>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- 11th line Footer -->
+<footer class="c-footer">
+    <div class="c-footer__wrapper">
+        <div class="c-footer__content">
+            <div class="c-footer__column">
+                <div data-qa-id="footer-heading" class="c-footer__title"><span>Practo</span></div>
+                <div><a data-qa-id="footer-item" target="_blank" class="c-footer__item" href="#"
+                        rel=""><span>About</span></a><a data-qa-id="footer-item" target="_blank" class="c-footer__item"
+                        href="#" rel=""><span>Blog</span></a><a data-qa-id="footer-item" target="_blank"
+                        class="c-footer__item" href="#" rel=""><span>Careers</span></a><a data-qa-id="footer-item"
+                        target="_blank" class="c-footer__item" href="#" rel=""><span>Press</span></a><a
+                        data-qa-id="footer-item" target="_blank" class="c-footer__item" href="#" rel=""><span>Contact
+                            Us</span></a>
+                </div>
+            </div>
+            <div class="c-footer__column">
+                <div data-qa-id="footer-heading" class="c-footer__title"><span>For patients</span></div>
+                <div><a data-qa-id="footer-item" target="_self" class="c-footer__item" href="#" rel=""><span>Search
+                            for doctors</span></a><a data-qa-id="footer-item" target="_self" class="c-footer__item"
+                        href="#" rel=""><span>Search for clinics</span></a><a data-qa-id="footer-item" target="_self"
+                        class="c-footer__item" href="#" rel=""><span>Search for
+                            hospitals</span></a><a data-qa-id="footer-item" target="_self" class="c-footer__item"
+                        href="/tests" rel=""><span>Book Diagnostic Tests</span></a><a data-qa-id="footer-item"
+                        target="_self" class="c-footer__item" href="#" rel=""><span>Book Full Body
+                            Checkups</span></a><a data-qa-id="footer-item" target="_self" class="c-footer__item"
+                        href="#" rel=""><span>Practo
+                            Plus</span></a><a data-qa-id="footer-item" target="_blank" class="c-footer__item" href="#"
+                        rel=""><span>Read health articles</span></a><a data-qa-id="footer-item" target="_blank"
+                        class="c-footer__item" href="#" rel=""><span>Read about
+                            medicines</span></a><a data-qa-id="footer-item" target="_blank" class="c-footer__item"
+                        href="#" rel=""><span>Practo drive</span></a><a data-qa-id="footer-item" target="_blank"
+                        class="c-footer__item" href="#" rel=""><span>Health app</span></a>
+                </div>
+            </div>
+            <div class="c-footer__column">
+                <div class="c-footer__row">
+                    <div data-qa-id="footer-heading" class="c-footer__title"><span>For doctors</span></div>
+                    <div><a data-qa-id="footer-item" target="_blank" class="c-footer__item" href="#" rel=""><span>Practo
+                                Profile</span></a></div>
+                </div>
+                <div class="c-footer__row">
+                    <div data-qa-id="footer-heading" class="c-footer__title"><span>For clinics</span></div>
+                    <div><a data-qa-id="footer-item" target="_blank" class="c-footer__item" href="#" rel=""><span>Ray by
+                                Practo</span></a><a data-qa-id="footer-item" target="_blank" class="c-footer__item"
+                            href="#" rel=""><span>Practo Reach</span></a><a data-qa-id="footer-item" target="_blank"
+                            class="c-footer__item" href="#" rel=""><span>Ray Tab</span></a><a data-qa-id="footer-item"
+                            target="_blank" class="c-footer__item" href="/practo-pro-app" rel=""><span>Practo
+                                Pro</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="c-footer__column">
+                <div data-qa-id="footer-heading" class="c-footer__title"><span>For hospitals</span></div>
+                <div><a data-qa-id="footer-item" target="_blank" class="c-footer__item" href="#" rel=""><span>Insta
+                            by Practo</span></a><a data-qa-id="footer-item" target="_blank" class="c-footer__item"
+                        href="#" rel=""><span>Qikwell by Practo</span></a><a data-qa-id="footer-item" target="_blank"
+                        class="c-footer__item" href="#" rel=""><span>Querent by Practo</span></a><a
+                        data-qa-id="footer-item" target="_blank" class="c-footer__item" href="#" rel=""><span>Practo
+                            Profile</span></a><a data-qa-id="footer-item" target="_blank" class="c-footer__item"
+                        href="#" rel=""><span>Practo Reach</span></a><a data-qa-id="footer-item" target="_blank"
+                        class="c-footer__item" href="#" rel=""><span>Practo Drive</span></a>
+                </div>
+            </div>
+            <div class="c-footer__column">
+                <div data-qa-id="footer-heading" class="c-footer__title"><span>More</span></div>
+                <div><a data-qa-id="footer-item" target="_blank" class="c-footer__item" href="#"
+                        rel=""><span>Help</span></a><a data-qa-id="footer-item" target="_blank" class="c-footer__item"
+                        href="#" rel=""><span>Developers</span></a><a data-qa-id="footer-item" target="_blank"
+                        class="c-footer__item" href="#" rel=""><span>Privacy Policy</span></a><a
+                        data-qa-id="footer-item" target="_blank" class="c-footer__item" href="#" rel=""><span>Terms
+                            &amp; Conditions</span></a><a data-qa-id="footer-item" target="_blank"
+                        class="c-footer__item" href="#" rel=""><span>Healthcare Directory</span></a><a
+                        data-qa-id="footer-item" target="_blank" class="c-footer__item" href="#" rel=""><span>Practo
+                            Health Wiki</span></a><a data-qa-id="footer-item" target="_blank" class="c-footer__item"
+                        href="#" rel=""><span>Corporate Wellness</span></a>
+                </div>
+            </div>
+            <div class="c-footer__column">
+                <div data-qa-id="footer-heading" class="c-footer__title"><span>Social</span></div>
+                <div><a data-qa-id="footer-item" target="_blank" class="c-footer__item" href="//www.facebook.com/practo"
+                        rel="nofollow"><span>Facebook</span></a><a data-qa-id="footer-item" target="_blank"
+                        class="c-footer__item" href="//twitter.com/Practo" rel="nofollow"><span>Twitter</span></a><a
+                        data-qa-id="footer-item" target="_blank" class="c-footer__item"
+                        href="//www.linkedin.com/company/practo-technologies-pvt-ltd"
+                        rel="nofollow"><span>LinkedIn</span></a><a data-qa-id="footer-item" target="_blank"
+                        class="c-footer__item" href="//www.youtube.com/user/PractoSupport"
+                        rel="nofollow"><span>Youtube</span></a><a data-qa-id="footer-item" target="_blank"
+                        class="c-footer__item" href="//github.com/practo" rel="nofollow"><span>Github</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="c-footer__copyright"><span class="LazyLoad is-visible"><img
+                    src="https://www.practostatic.com/web-assets/images/white_practo_logo.svg" alt="Practo"
+                    class="c-footer__logo"></span>
+            <div class="c-copyright"><span>Copyright © 2020, Practo. </span><span>All rights reserved.</span></div>
+        </div>
+    </div>
+</footer>
